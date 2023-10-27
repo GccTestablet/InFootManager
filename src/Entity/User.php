@@ -2,10 +2,8 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
 class User
 {
@@ -14,10 +12,10 @@ class User
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 200)]
-    private ?string $email = null;
+    #[ORM\Column(length: 200, nullable: false)]
+    private ?string $email;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 100, nullable: false)]
     private ?string $password = null;
 
     #[ORM\ManyToOne(targetEntity: Player::class, inversedBy: "teams")]

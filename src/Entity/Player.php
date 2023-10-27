@@ -2,11 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\PlayerRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: PlayerRepository::class)]
 class Player
 {
     #[ORM\Id]
@@ -20,8 +18,8 @@ class Player
     #[ORM\Column(length: 100)]
     private ?string $lastName = null;
 
-    #[ORM\Column(length: 20)]
-    private ?string $category = null;
+    #[ORM\Column(length: 20, enumType: \PlayerCategoryEnumType::class)]
+    private \PlayerCategoryEnumType $category;
 
     #[ORM\ManyToMany(targetEntity: Team::class, mappedBy: "players")]
     private Collection $teams;
