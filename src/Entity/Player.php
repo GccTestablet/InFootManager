@@ -10,13 +10,13 @@ class Player
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $id;
 
-    #[ORM\Column(length: 100)]
-    private ?string $firstName = null;
+    #[ORM\Column(length: 100, nullable: false)]
+    private ?string $firstName;
 
-    #[ORM\Column(length: 100)]
-    private ?string $lastName = null;
+    #[ORM\Column(length: 100, nullable: false)]
+    private ?string $lastName;
 
     #[ORM\Column(length: 20, enumType: \PlayerCategoryEnumType::class)]
     private \PlayerCategoryEnumType $category;

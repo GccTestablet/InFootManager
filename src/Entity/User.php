@@ -16,7 +16,7 @@ class User
     private ?string $email;
 
     #[ORM\Column(length: 100, nullable: false)]
-    private ?string $password = null;
+    private ?string $password;
 
     #[ORM\ManyToOne(targetEntity: Player::class, inversedBy: "teams")]
     private ?Player $playerId;
