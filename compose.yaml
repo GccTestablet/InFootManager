@@ -12,7 +12,6 @@ services:
       - database_data:/var/lib/postgresql/data:rw
     ports:
       - "15432:5432"
-
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
 
