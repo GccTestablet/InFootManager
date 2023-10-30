@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5e9ac1-07fe-417d-bbe6-e2d1fb4816d8" name="Changes" comment="Edit Tables, Add auth">
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+    <list default="true" id="1b5e9ac1-07fe-417d-bbe6-e2d1fb4816d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20231026145828.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20231026145828.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231026145828.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Team.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enum/PlayerCategoryEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enum/PlayerCategoryEnum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enum/PlayerCategoryEnum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enum/PlayerCategoryEnumType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +172,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2XIFamT3qkYkX1o4UDFltE9P5p5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -203,7 +210,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698308752551</updated>
       <workItem from="1698308753624" duration="20476000" />
-      <workItem from="1698655096858" duration="9912000" />
+      <workItem from="1698655096858" duration="11671000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore&#10;Edit Readme.md">
       <option name="closed" value="true" />
@@ -261,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698654960405</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Edit Tables, Add auth">
+      <option name="closed" value="true" />
+      <created>1698676764400</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698676764400</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
