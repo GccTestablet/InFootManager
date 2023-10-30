@@ -12,14 +12,15 @@ class User
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 200, nullable: false)]
+    #[ORM\Column(length: 200)]
     private ?string $email;
 
-    #[ORM\Column(length: 100, nullable: false)]
+    #[ORM\Column(length: 100)]
     private ?string $password;
 
-    #[ORM\ManyToOne(targetEntity: Player::class, inversedBy: "teams")]
-    private ?Player $playerId;
+    #[ORM\OneToOne(mappedBy: "user", targetEntity: Player::class)]
+    #[ORM\JoinColumn(name:"player", referencedColumnName:"id", nullable:true)]
+    private ?Player $player;
 
     public function getId(): ?int
     {
@@ -50,14 +51,14 @@ class User
         return $this;
     }
 
-    public function getPlayerId(): ?int
+    public function getPlayer(): Player
     {
-        return $this->playerId;
+        return $this->player;
     }
 
-    public function setPlayerId(?int $playerId): static
+    public function setPlayer(Player $player): static
     {
-        $this->playerId = $playerId;
+        $this->player = $player;
 
         return $this;
     }

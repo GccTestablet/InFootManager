@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Enum\PlayerCategoryEnumType;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -12,27 +14,32 @@ class Player
     #[ORM\Column]
     private ?int $id;
 
-    #[ORM\Column(length: 100, nullable: false)]
-    private ?string $firstName;
+    #[ORM\Column(length: 100)]
+    private string $firstName;
 
-    #[ORM\Column(length: 100, nullable: false)]
-    private ?string $lastName;
+    #[ORM\Column(length: 100)]
+    private string $lastName;
 
-    #[ORM\Column(length: 20, enumType: \PlayerCategoryEnumType::class)]
-    private \PlayerCategoryEnumType $category;
+    #[ORM\Column(length: 20, enumType: PlayerCategoryEnumType::class)]
+    private PlayerCategoryEnumType $category;
 
     #[ORM\ManyToMany(targetEntity: Team::class, mappedBy: "players")]
     private Collection $teams;
 
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: "teams")]
-    private ?User $userId;
+    #[ORM\OneToOne(inversedBy: "player", targetEntity: User::class)]
+    #[ORM\JoinColumn(name:"user", referencedColumnName:"id", nullable:false)]
+    private User $user;
+
+    public function __construct() {
+        $this->teams = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFirstName(): ?string
+    public function getFirstName(): string
     {
         return $this->firstName;
     }
@@ -44,7 +51,7 @@ class Player
         return $this;
     }
 
-    public function getLastName(): ?string
+    public function getLastName(): string
     {
         return $this->lastName;
     }
@@ -56,26 +63,26 @@ class Player
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategory(): PlayerCategoryEnumType
     {
         return $this->category;
     }
 
-    public function setCategory(string $category): static
+    public function setCategory(PlayerCategoryEnumType $category): static
     {
         $this->category = $category;
 
         return $this;
     }
 
-    public function getUserId(): ?int
+    public function getUser(): User
     {
-        return $this->userId;
+        return $this->user;
     }
 
-    public function setUserId(int $userId): static
+    public function setUser(User $user): static
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }

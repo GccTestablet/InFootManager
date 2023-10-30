@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App\Enum;
+
 enum PlayerCategoryEnumType: string
 {
     case DEBUTANT = 'debutant';
