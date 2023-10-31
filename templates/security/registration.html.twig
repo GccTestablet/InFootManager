@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Registration !{% endblock %}
 
 {% block body %}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form class="form-signin" method="post">
+                <form class="form-registration" method="post">
                     {% if error %}
                         <div class="alert alert-danger" role="alert">
                             {{ error.messageKey|trans(error.messageData, 'security') }}
@@ -18,20 +18,23 @@
                             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
                         </div>
                     {% else %}
-                        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
                         <label for="inputEmail" class="sr-only">Email address</label>
                         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
 
                         <label for="inputPassword" class="sr-only">Password</label>
-                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="new-password" required>
+
+                        <label for="inputPasswordConfirm" class="sr-only">Confirm Password</label>
+                        <input type="password" name="password_confirm" id="inputPasswordConfirm" class="form-control" autocomplete="new-password" required>
 
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
 
                         <div class="text-center mt-3">
-                            <p>Don't have an account? <a href="{{ path('app_registration') }}">Sign up</a></p>
+                            <p>Already have an account? <a href="{{ path('app_login') }}">Sign in</a></p>
                         </div>
                     {% endif %}
                 </form>

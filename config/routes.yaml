@@ -10,3 +10,12 @@ app_login:
 
 app_logout:
     path: /logout
+    controller: App\Controller\SecurityController::logout
+
+app_home:
+    path: /home
+    controller: App\Controller\SecurityController::home
+
+app_registration:
+    path: /registration
+    controller: App\Controller\SecurityController::registration
