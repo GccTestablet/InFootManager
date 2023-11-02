@@ -18,9 +18,9 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+         if ($this->getUser()) {
+             return $this->redirectToRoute('app_home');
+         }
 
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
@@ -37,6 +37,10 @@ class SecurityController extends AbstractController
     #[Route(path: '/home', name: 'app_home')]
     public function home(): Response
     {
+        if(!$this->getUser()->getPlayer()){
+            return $this->redirectToRoute('app_player_create');
+        }
+
         return $this->render('home.html.twig');
     }
 }
