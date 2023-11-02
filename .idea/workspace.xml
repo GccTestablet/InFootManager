@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b5e9ac1-07fe-417d-bbe6-e2d1fb4816d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PlayerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/player/create_player.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/player/profile.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PlayerType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PlayerType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/player/create_player.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/player/create.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698308752551</updated>
       <workItem from="1698308753624" duration="20476000" />
-      <workItem from="1698655096858" duration="24687000" />
+      <workItem from="1698655096858" duration="26562000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore&#10;Edit Readme.md">
       <option name="closed" value="true" />
@@ -294,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698760756135</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ajout route creation player, profil">
+      <option name="closed" value="true" />
+      <created>1698938887532</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698938887532</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +323,7 @@
     <MESSAGE value="Edit Tables, Add auth" />
     <MESSAGE value="Edit auth" />
     <MESSAGE value="Ajout du form register et Ajout de redirection after login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du form register et Ajout de redirection after login" />
+    <MESSAGE value="Ajout route creation player, profil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout route creation player, profil" />
   </component>
 </project>

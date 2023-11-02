@@ -10,12 +10,9 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     #[Route(path: '/registration', name: 'app_registration')]
-    public function registration(AuthenticationUtils $authenticationUtils): Response
+    public function registration(): Response
     {
-        $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getLastUsername();
-
-        return $this->render('security/registration.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('security/registration.html.twig');
     }
 
     #[Route(path: '/login', name: 'app_login')]

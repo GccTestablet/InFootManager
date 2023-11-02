@@ -22,7 +22,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password;
 
     #[ORM\OneToOne(mappedBy: "user", targetEntity: Player::class)]
-    #[ORM\JoinColumn(name:"player", referencedColumnName:"id", nullable:true)]
+    #[ORM\JoinColumn(name:"player_id", referencedColumnName:"id", nullable:true)]
     private ?Player $player;
 
     public function getId(): ?int
@@ -54,12 +54,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getPlayer(): Player
+    public function getPlayer(): ?Player
     {
         return $this->player;
     }
 
-    public function setPlayer(Player $player): static
+    public function setPlayer(?Player $player): static
     {
         $this->player = $player;
 

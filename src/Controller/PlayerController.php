@@ -10,9 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+#[Route('/players')]
 class PlayerController extends AbstractController
 {
-    #[Route('/create_player', name: 'app_create_player')]
+    #[Route('/create', name: 'app_player_create')]
     public function createPlayer(Request $request, ManagerRegistry $doctrine): Response
     {
         $user = $this->getUser();
@@ -29,13 +30,14 @@ class PlayerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+//            \dd($player);
             $entityManager->persist($player);
             $entityManager->flush();
 
             return $this->redirectToRoute('app_player_profile');
         }
 
-        return $this->render('player/create_player.html.twig', [
+        return $this->render('player/create.html.twig', [
             'form' => $form->createView(),
         ]);
     }

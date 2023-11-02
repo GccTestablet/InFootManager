@@ -3,27 +3,3 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-
-app_login:
-    path: /login
-    controller: App\Controller\SecurityController::login
-
-app_logout:
-    path: /logout
-    controller: App\Controller\SecurityController::logout
-
-app_home:
-    path: /home
-    controller: App\Controller\SecurityController::home
-
-app_registration:
-    path: /registration
-    controller: App\Controller\SecurityController::registration
-
-app_create_player:
-    path: /create_player
-    controller: App\Controller\PlayerController::create_player
-
-app_profile_player:
-    path: /profil
-    controller: App\Controller\PlayerController::profil

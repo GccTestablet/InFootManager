@@ -29,7 +29,7 @@ class Player
     private Collection $teams;
 
     #[ORM\OneToOne(inversedBy: "player", targetEntity: User::class)]
-    #[ORM\JoinColumn(name:"user", referencedColumnName:"id", nullable:false)]
+    #[ORM\JoinColumn(name:"user_id", referencedColumnName:"id", nullable:false)]
     private User $user;
 
     public function __construct() {
