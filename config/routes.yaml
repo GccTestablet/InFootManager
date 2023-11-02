@@ -19,3 +19,11 @@ app_home:
 app_registration:
     path: /registration
     controller: App\Controller\SecurityController::registration
+
+app_create_player:
+    path: /create_player
+    controller: App\Controller\PlayerController::create_player
+
+app_profile_player:
+    path: /profil
+    controller: App\Controller\PlayerController::profil
